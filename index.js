@@ -1,3 +1,5 @@
+const { spy } = require("chai");
+
 function returnsAnAnonymousFunction() {
     return function(){
         console.log("Yummy");
@@ -10,5 +12,6 @@ function returnsANamedFunction() {
 }
 
 function receivesAFunction(spy){
-    return spy());
+    spy()
 }
+
